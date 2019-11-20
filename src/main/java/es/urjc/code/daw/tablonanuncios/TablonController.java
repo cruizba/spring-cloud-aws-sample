@@ -33,7 +33,6 @@ public class TablonController {
 	public void init() {
 		repository.save(new Anuncio("Pepe", "Hola caracola", "A description"));
 		repository.save(new Anuncio("Juan", "Hola caracola", "A description"));
-		System.out.println(bucket);
 	}
 
 	@RequestMapping("/")
