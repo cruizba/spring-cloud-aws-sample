@@ -29,14 +29,11 @@ public class TablonController {
 	@Value("${cloud.aws.s3.bucket}")
 	private String bucket;
 
-	@Value("${aws.secretsmanager.prefix}")
-	private String prefix;
-
 	@PostConstruct
 	public void init() {
 		repository.save(new Anuncio("Pepe", "Hola caracola", "A description"));
 		repository.save(new Anuncio("Juan", "Hola caracola", "A description"));
-		System.out.println(prefix);
+		System.out.println(bucket);
 	}
 
 	@RequestMapping("/")
